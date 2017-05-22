@@ -45,7 +45,7 @@ class AHImageDownloadQueue: OperationQueue {
 			The idea is to keep downloading and caching images for already invisible cells, but with lower priority
 			Last operation is always with high priority
 			This method performs lowering priorities for other operations.
-			However this step is can be improved: Operations do not always start with correct order
+			However this step can be improved: Operations do not always start with correct order
 		*/
 		if (self.operations.count > kTopPrioritiesOperationsCount) {
 			let endIndex = self.operations.endIndex.advanced(by: -kTopPrioritiesOperationsCount)
