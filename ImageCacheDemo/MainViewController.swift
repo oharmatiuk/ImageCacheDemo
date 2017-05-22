@@ -12,16 +12,8 @@ class ImageTableViewController: UIViewController, UITableViewDelegate, UITableVi
     // Image is masked, just to demonstrate usage of CoreGraphics
     let placeHolderImage = UIImage(named: "cellPlaceholder")?.maskedWith(.roundedRect)
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1;
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10000;
-    }
-    
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -60,10 +52,6 @@ class ImageTableViewController: UIViewController, UITableViewDelegate, UITableVi
          */
         
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50;
     }
     
 }
